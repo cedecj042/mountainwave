@@ -11,6 +11,7 @@
 body {
   overflow-x: hidden;
   margin: 0;
+  padding: 0;
   width: 100%;
 }
 
@@ -18,17 +19,20 @@ body {
   background-color: #fff;
   height: 100px;
   box-shadow: 3px 0px 10px rgba(55, 55, 55, 0.13);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
-
-ul {
+.menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-ul li {
+.menu ul li {
   padding: 15px 25px;
 }
-ul li a {
+.menu ul li a {
   font-family: Louis;
   font-size: 20px;
   color: #042F44;
@@ -58,6 +62,12 @@ header button {
   box-shadow: none;
   border: none;
 }
+header button:hover {
+  background-color: #176081;
+}
+header button:active {
+  background-color: #011924;
+}
 header img {
   height: 650px;
 }
@@ -66,7 +76,7 @@ header img {
   height: 700px;
   background-color: #FCFCFC;
 }
-.discover h3 {
+.discover h2 {
   font-family: LouisB;
   font-size: 33px;
 }
@@ -85,4 +95,23 @@ header img {
 .discover .card .card-body h6 {
   font-family: Louis;
   font-size: 16px;
+}
+.discover button {
+  color: #000;
+  font-family: Louis;
+  font-size: 18px;
+  padding: 5px;
+}
+.discover button:hover {
+  color: #042F44;
+  border-bottom: 2px solid #042F44;
+  border-radius: 0;
+}
+
+.featured {
+  height: 700px;
+}
+.featured h2 {
+  font-family: LouisB;
+  font-size: 33px;
 }/*# sourceMappingURL=style.css.map */

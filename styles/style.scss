@@ -1,4 +1,18 @@
 $primary:#042F44;
+$darkprimary:#011924;
+$lightprimary:#176081;
+@mixin mybtn{
+    color: #000;
+    @include myfont(Louis,18px);
+    padding: 5px;
+    &:hover{
+        color: $primary;
+        border-bottom: 2px solid $primary;
+
+        border-radius: 0;
+    }
+}
+
 @font-face{
     font-family:Louis;
     src: url(../LouisGeorgeCafe.ttf);
@@ -14,8 +28,9 @@ $primary:#042F44;
     font-size: $x;
 }
 body {
-    overflow-x: hidden;
+    overflow-x:hidden;
     margin: 0;
+    padding: 0;
     width: 100%;
 }
 
@@ -23,21 +38,26 @@ body {
     background-color: #fff;
     height: 100px;
     box-shadow: 3px 0px 10px rgba(55,55,55,.13);
-}
-
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding:0;
-    li{
-        padding: 15px 25px;
-        a{
-            @include myfont(Louis,20px);
-            color: $primary;
-            text-decoration: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding:0;
+        li{
+            padding: 15px 25px;
+            a{
+                @include myfont(Louis,20px);
+                color: $primary;
+                text-decoration: none;
+            }
         }
     }
 }
+
+
 
 header{
     height: 85vh;
@@ -57,6 +77,12 @@ header{
         color:white;
         box-shadow: none;
         border: none;
+        &:hover {
+            background-color: $lightprimary;
+        }
+        &:active{
+            background-color: $darkprimary;
+        }
     }
     img {
         height: 650px;
@@ -66,7 +92,7 @@ header{
 .discover{
     height: 700px;
     background-color: #FCFCFC;
-    h3{
+    h2{
         @include myfont(LouisB,33px);
     }
     .card{
@@ -83,5 +109,15 @@ header{
             }
         }
     }
+    button{
+        @include mybtn();
+    }
 
+}
+
+.featured{
+    height: 700px;
+    h2{
+        @include myfont(LouisB,33px);
+    }
 }
