@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Louis;
+  src: url(../LouisGeorgeCafe.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: LouisB;
+  src: url(../LouisGeorgeCafeBold.ttf);
+  font-weight: bolder;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  width: 100%;
+}
+
+.menu {
+  background-color: #fff;
+  height: 100px;
+  box-shadow: 3px 0px 10px rgba(55, 55, 55, 0.13);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  padding: 15px 25px;
+}
+ul li a {
+  font-family: Louis;
+  font-size: 20px;
+  color: #042F44;
+  text-decoration: none;
+}
+
+header {
+  height: 85vh;
+  background-color: #fff;
+}
+header h1 {
+  font-family: LouisB;
+  font-size: 52px;
+  color: #1d1d1d;
+}
+header h4 {
+  font-family: Louis;
+  font-size: 24px;
+}
+header button {
+  font-family: Louis;
+  font-size: 18px;
+  height: 56px;
+  width: 180px;
+  background-color: #042F44;
+  color: white;
+  box-shadow: none;
+  border: none;
+}
+header img {
+  height: 650px;
+}
+
+.discover {
+  height: 700px;
+  background-color: #FCFCFC;
+}
+.discover h3 {
+  font-family: LouisB;
+  font-size: 33px;
+}
+.discover .card {
+  width: 18rem;
+}
+.discover .card .card-body {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+.discover .card .card-body h3 {
+  font-family: LouisB;
+  font-size: 24px;
+}
+.discover .card .card-body h6 {
+  font-family: Louis;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */

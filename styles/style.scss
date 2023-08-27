@@ -1,0 +1,87 @@
+$primary:#042F44;
+@font-face{
+    font-family:Louis;
+    src: url(../LouisGeorgeCafe.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: LouisB;
+    src: url(../LouisGeorgeCafeBold.ttf);
+    font-weight:bolder;
+}
+@mixin myfont($fs,$x){
+    font-family: $fs;
+    font-size: $x;
+}
+body {
+    overflow-x: hidden;
+    margin: 0;
+    width: 100%;
+}
+
+.menu {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 3px 0px 10px rgba(55,55,55,.13);
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    li{
+        padding: 15px 25px;
+        a{
+            @include myfont(Louis,20px);
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}
+
+header{
+    height: 85vh;
+    background-color: #fff;
+    h1{
+        @include myfont(LouisB,52px);
+        color: #1d1d1d;
+    }
+    h4{
+        @include myfont(Louis,24px);
+    }
+    button{
+        @include myfont(Louis,18px);
+        height: 56px;
+        width: 180px;
+        background-color: $primary;
+        color:white;
+        box-shadow: none;
+        border: none;
+    }
+    img {
+        height: 650px;
+    }
+}
+
+.discover{
+    height: 700px;
+    background-color: #FCFCFC;
+    h3{
+        @include myfont(LouisB,33px);
+    }
+    .card{
+        width: 18rem;
+        .card-body{
+            position:absolute;
+            bottom: 0;
+            left: 10px;
+            h3{
+                @include myfont(LouisB,24px);
+            }
+            h6{
+                @include myfont(Louis,16px);
+            }
+        }
+    }
+
+}
