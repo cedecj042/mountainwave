@@ -1,34 +1,39 @@
-$primary:#042F44;
-$darkprimary:#011924;
-$lightprimary:#176081;
-@mixin mybtn{
+$primary: #042F44;
+$darkprimary: #011924;
+$lightprimary: #176081;
+
+@mixin mybtn {
     color: #000;
-    @include myfont(Louis,18px);
+    @include myfont(Louis, 18px);
     padding: 5px;
-    border-bottom: 2px solid rgba(0,31,46,0);
+    border-bottom: 2px solid rgba(0, 31, 46, 0);
     border-radius: 0;
-    &:hover{
+
+    &:hover {
         color: $primary;
-        border-bottom: 2px solid rgba(0,31,46,1);
+        border-bottom: 2px solid rgba(0, 31, 46, 1);
     }
 }
 
-@font-face{
-    font-family:Louis;
+@font-face {
+    font-family: Louis;
     src: url(../LouisGeorgeCafe.ttf);
     font-weight: 400;
 }
+
 @font-face {
     font-family: LouisB;
     src: url(../LouisGeorgeCafeBold.ttf);
-    font-weight:bolder;
+    font-weight: bolder;
 }
-@mixin myfont($fs,$x){
+
+@mixin myfont($fs, $x) {
     font-family: $fs;
     font-size: $x;
 }
+
 body {
-    overflow-x:hidden;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -37,19 +42,22 @@ body {
 .menu {
     background-color: #fff;
     height: 100px;
-    box-shadow: 3px 0px 10px rgba(55,55,55,.13);
+    box-shadow: 3px 0px 10px rgba(55, 55, 55, .13);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
-    ul{
+
+    ul {
         list-style-type: none;
         margin: 0;
-        padding:0;
-        li{
+        padding: 0;
+
+        li {
             padding: 15px 25px;
-            a{
-                @include myfont(Louis,20px);
+
+            a {
+                @include myfont(Louis, 20px);
                 color: $primary;
                 text-decoration: none;
             }
@@ -59,84 +67,110 @@ body {
 
 
 
-header{
+header {
     height: 85vh;
     background-color: #fff;
-    h1{
-        @include myfont(LouisB,52px);
+
+    h1 {
+        @include myfont(LouisB, 52px);
         color: #1d1d1d;
     }
-    h4{
-        @include myfont(Louis,24px);
+
+    h4 {
+        @include myfont(Louis, 24px);
     }
-    button{
-        @include myfont(Louis,18px);
+
+    button {
+        @include myfont(Louis, 18px);
         height: 56px;
         width: 180px;
         background-color: $primary;
-        color:white;
+        color: white;
         box-shadow: none;
         border: none;
+
         &:hover {
             background-color: $lightprimary;
         }
-        &:active{
+
+        &:active {
             background-color: $darkprimary;
         }
     }
+
     img {
         height: 650px;
     }
 }
 
-.discover{
+.discover {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
     height: 700px;
     background-color: #FCFCFC;
-    h2{
-        @include myfont(LouisB,33px);
+
+    h2 {
+        @include myfont(LouisB, 33px);
     }
-    .card{
+
+    .card {
         width: 18rem;
-        .card-body{
-            position:absolute;
+
+        .card-body {
+            position: absolute;
             bottom: 0;
             left: 10px;
-            h3{
-                @include myfont(LouisB,24px);
+
+            h3 {
+                @include myfont(LouisB, 24px);
             }
-            h6{
-                @include myfont(Louis,16px);
+
+            h6 {
+                @include myfont(Louis, 16px);
             }
         }
     }
-    button{
+
+    button {
         @include mybtn();
     }
 
 }
 
-.featured{
-    // height: 700px;
-    h2{
-        @include myfont(LouisB,33px);
+
+.featured {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+    h2 {
+        @include myfont(LouisB, 33px);
     }
-    .card-body{
-        padding:10px 0;
+
+    .card-body {
+        padding: 10px 0;
         width: 250px !important;
-        h3{
-            @include myfont(Louis,26px);
+
+        h3 {
+            @include myfont(Louis, 26px);
         }
-        h6{
-            @include myfont(Louis,18px);
+
+        h6 {
+            @include myfont(Louis, 18px);
         }
-        
+
     }
-    .btn{
+
+    .btn {
         @include mybtn();
     }
 }
-
-.parallax{
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    // transition: all 1s ease-out;
+}
+.parallax {
     height: 800px;
     background-image: url(../images/cover.png);
     background-position: center;
@@ -144,46 +178,56 @@ header{
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 800px;
-    color:white;
-    h2{
-        @include myfont(LouisB,62px);
+    color: white;
+
+    h2 {
+        @include myfont(LouisB, 62px);
         text-transform: capitalize;
     }
-    p{
-        @include myfont(Louis,36px);
+
+    p {
+        @include myfont(Louis, 36px);
     }
 }
 
 
-.brands{
+.brands {
     height: 400px;
-    .underarmour{
+
+    .underarmour {
         animation: imageOne infinite 17s linear;
     }
-    .adidas{
+
+    .adidas {
         animation: imageTwo infinite 17s linear;
     }
-    .anta{
+
+    .anta {
         animation: imageThree infinite 17s linear;
     }
-    .basics{
+
+    .basics {
         animation: imageFour infinite 17s linear;
     }
-    .cotopaxi{
+
+    .cotopaxi {
         animation: imageFive infinite 17s linear;
     }
-    .houdini{
+
+    .houdini {
         animation: imageSix infinite 17s linear;
     }
-    .danner{
+
+    .danner {
         animation: imageSeven infinite 17s linear;
     }
-    .mammut{
+
+    .mammut {
         animation: imageEight infinite 17s linear;
     }
-    
 
-    img{
+
+    img {
         margin: 30px;
         padding: 10px;
         width: fit-content;
@@ -191,110 +235,289 @@ header{
     }
 }
 
-.footer{
-    color:white;
+.footer {
+    color: white;
     height: 400px;
     background-color: #001F2E;
-    a{
+
+    a {
         text-decoration: none;
         color: #f6f6f6;
-        h3{
-            @include myfont(LouisB,24px);
+
+        h3 {
+            @include myfont(LouisB, 24px);
             margin-bottom: 10px
         }
-        h6{
-            @include myfont(Louis,16px);
+
+        h6 {
+            @include myfont(Louis, 16px);
             margin-bottom: 12px;
         }
     }
 
 }
 
-.copyright{
+.copyright {
     background-color: $primary;
-    color:white;
-    ul{
-        li{
+    color: white;
+
+    ul {
+        li {
             list-style-type: none;
         }
     }
-    h4{
-        @include myfont(LouisB,18px);
+
+    h4 {
+        @include myfont(LouisB, 18px);
         margin: 0;
     }
 }
 
-@keyframes fadeIn{
-    0% {opacity:1;}
-    100% {opacity:0;}
+
+@keyframes imageOne {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        transform: translateX(-12vw);
+        opacity: 1;
+    }
+
+    11% {
+        transform: translateX(-12vw);
+        opacity: 0;
+    }
+
+    12% {
+        transform: translateX(97vw);
+        opacity: 0;
+    }
+
+    13% {
+        transform: translateX(97vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
+@keyframes imageTwo {
+    0% {
+        opacity: 1;
+    }
 
-@keyframes imageOne{
-    0% { opacity: 1;}
-    10% {transform: translateX(-12vw);opacity:1;}
-    11% {transform: translateX(-12vw);opacity: 0;}
-    12%{transform:translateX(97vw);opacity: 0;}
-    13%{transform:translateX(97vw);opacity: 1;}
-    100% {transform:translateX(0);opacity: 1;}
-}
+    20% {
+        transform: translateX(-21vw);
+        opacity: 1;
+    }
 
-@keyframes imageTwo{
-    0% { opacity: 1;}
-    20% {transform: translateX(-21vw);opacity:1;}
-    21% {transform: translateX(-21vw);opacity: 0;}
-    22%{transform:translateX(87vw);opacity: 0;}
-    23%{transform:translateX(87vw);opacity: 1;}
-    100% {transform:translateX(0);opacity: 1;}
-}
+    21% {
+        transform: translateX(-21vw);
+        opacity: 0;
+    }
 
-@keyframes imageThree{
-    0% { opacity: 1;}
-    30% {transform: translateX(-32vw);opacity:1;}
-    31% {transform: translateX(-32vw);opacity: 0;}
-    32%{transform:translateX(80vw);opacity: 0;}
-    33%{transform:translateX(80vw);opacity: 1;}
-    100% {transform:translateX(0);opacity: 1;}
-}
-@keyframes imageFour{
-    0% { opacity: 1;}
-    40% {transform: translateX(-45vw);opacity:1;}
-    41% {transform: translateX(-45vw);opacity: 0;}
-    42%{transform:translateX(70vw);opacity: 0;}
-    43%{transform:translateX(70vw);opacity: 1;}
-    100% {transform:translateX(0);opacity: 1;}
+    22% {
+        transform: translateX(87vw);
+        opacity: 0;
+    }
+
+    23% {
+        transform: translateX(87vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-@keyframes imageFive{
-    0% { opacity: 1;}
-    53% {transform: translateX(-62vw);opacity:1;}
-    54% {transform: translateX(-62vw);opacity: 0;}
-    55%{transform:translateX(57vw);opacity: 0;}
-    56%{transform:translateX(57vw);opacity: 1;}
-    100% {transform:translateX(0);opacity: 1;}
+@keyframes imageThree {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateX(-32vw);
+        opacity: 1;
+    }
+
+    31% {
+        transform: translateX(-32vw);
+        opacity: 0;
+    }
+
+    32% {
+        transform: translateX(80vw);
+        opacity: 0;
+    }
+
+    33% {
+        transform: translateX(80vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-@keyframes imageSix{
-    0% { opacity: 1;}
-    72% {transform: translateX(-85vw);opacity:1;}
-    73% {transform: translateX(-85vw);opacity: 0;}
-    74%{transform:translateX(45vw);opacity: 0;}
-    75%{transform:translateX(45vw);opacity: 1;}
-    100% {transform:translateX(0);opacity: 1;}
+@keyframes imageFour {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        transform: translateX(-45vw);
+        opacity: 1;
+    }
+
+    41% {
+        transform: translateX(-45vw);
+        opacity: 0;
+    }
+
+    42% {
+        transform: translateX(70vw);
+        opacity: 0;
+    }
+
+    43% {
+        transform: translateX(70vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
-@keyframes imageSeven{
-    0% { opacity: 1;}
-    83% {transform: translateX(-96vw);opacity:1;}
-    84% {transform: translateX(-96vw);opacity: 0;}
-    85%{transform:translateX(35vw);opacity: 0;}
-    86%{transform:translateX(35vw);opacity: 1;}
-    100% {transform:translateX(0);opacity: 1;}
+
+@keyframes imageFive {
+    0% {
+        opacity: 1;
+    }
+
+    53% {
+        transform: translateX(-62vw);
+        opacity: 1;
+    }
+
+    54% {
+        transform: translateX(-62vw);
+        opacity: 0;
+    }
+
+    55% {
+        transform: translateX(57vw);
+        opacity: 0;
+    }
+
+    56% {
+        transform: translateX(57vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
-@keyframes imageEight{
-    0% { opacity: 1;}
-    94% {transform: translateX(-106vw);opacity:1;}
-    95% {transform: translateX(-106vw);opacity: 0;}
-    96%{transform:translateX(25vw);opacity: 0;}
-    97%{transform:translateX(25vw);opacity: 1;}
-    100% {transform:translateX(0);opacity: 1;}
+
+@keyframes imageSix {
+    0% {
+        opacity: 1;
+    }
+
+    72% {
+        transform: translateX(-85vw);
+        opacity: 1;
+    }
+
+    73% {
+        transform: translateX(-85vw);
+        opacity: 0;
+    }
+
+    74% {
+        transform: translateX(45vw);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateX(45vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes imageSeven {
+    0% {
+        opacity: 1;
+    }
+
+    83% {
+        transform: translateX(-96vw);
+        opacity: 1;
+    }
+
+    84% {
+        transform: translateX(-96vw);
+        opacity: 0;
+    }
+
+    85% {
+        transform: translateX(35vw);
+        opacity: 0;
+    }
+
+    86% {
+        transform: translateX(35vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes imageEight {
+    0% {
+        opacity: 1;
+    }
+
+    94% {
+        transform: translateX(-106vw);
+        opacity: 1;
+    }
+
+    95% {
+        transform: translateX(-106vw);
+        opacity: 0;
+    }
+
+    96% {
+        transform: translateX(25vw);
+        opacity: 0;
+    }
+
+    97% {
+        transform: translateX(25vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

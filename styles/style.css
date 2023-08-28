@@ -73,6 +73,9 @@ header img {
 }
 
 .discover {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
   height: 700px;
   background-color: #FCFCFC;
 }
@@ -109,6 +112,11 @@ header img {
   border-bottom: 2px solid rgb(0, 31, 46);
 }
 
+.featured {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
 .featured h2 {
   font-family: LouisB;
   font-size: 33px;
@@ -136,6 +144,11 @@ header img {
 .featured .btn:hover {
   color: #042F44;
   border-bottom: 2px solid rgb(0, 31, 46);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .parallax {
@@ -227,14 +240,6 @@ header img {
   margin: 0;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes imageOne {
   0% {
     opacity: 1;
