@@ -369,19 +369,19 @@ header img {
   0% {
     opacity: 1;
   }
-  72% {
+  70% {
     transform: translateX(-85vw);
     opacity: 1;
   }
-  73% {
+  71% {
     transform: translateX(-85vw);
     opacity: 0;
   }
-  74% {
+  72% {
     transform: translateX(45vw);
     opacity: 0;
   }
-  75% {
+  73% {
     transform: translateX(45vw);
     opacity: 1;
   }
@@ -394,19 +394,19 @@ header img {
   0% {
     opacity: 1;
   }
-  83% {
+  80% {
     transform: translateX(-96vw);
     opacity: 1;
   }
-  84% {
+  81% {
     transform: translateX(-96vw);
     opacity: 0;
   }
-  85% {
+  82% {
     transform: translateX(35vw);
     opacity: 0;
   }
-  86% {
+  83% {
     transform: translateX(35vw);
     opacity: 1;
   }
