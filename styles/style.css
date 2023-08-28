@@ -161,11 +161,29 @@ header img {
 .brands {
   height: 400px;
 }
-.brands .ua {
-  transform: translateX(-60px);
+.brands .underarmour {
+  animation: imageOne infinite 17s linear;
 }
-.brands .cp {
-  transform: translateX(-300px);
+.brands .adidas {
+  animation: imageTwo infinite 17s linear;
+}
+.brands .anta {
+  animation: imageThree infinite 17s linear;
+}
+.brands .basics {
+  animation: imageFour infinite 17s linear;
+}
+.brands .cotopaxi {
+  animation: imageFive infinite 17s linear;
+}
+.brands .houdini {
+  animation: imageSix infinite 17s linear;
+}
+.brands .danner {
+  animation: imageSeven infinite 17s linear;
+}
+.brands .mammut {
+  animation: imageEight infinite 17s linear;
 }
 .brands img {
   margin: 30px;
@@ -207,4 +225,213 @@ header img {
   font-family: LouisB;
   font-size: 18px;
   margin: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes imageOne {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    transform: translateX(-12vw);
+    opacity: 1;
+  }
+  11% {
+    transform: translateX(-12vw);
+    opacity: 0;
+  }
+  12% {
+    transform: translateX(97vw);
+    opacity: 0;
+  }
+  13% {
+    transform: translateX(97vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imageTwo {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-21vw);
+    opacity: 1;
+  }
+  21% {
+    transform: translateX(-21vw);
+    opacity: 0;
+  }
+  22% {
+    transform: translateX(87vw);
+    opacity: 0;
+  }
+  23% {
+    transform: translateX(87vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imageThree {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-32vw);
+    opacity: 1;
+  }
+  31% {
+    transform: translateX(-32vw);
+    opacity: 0;
+  }
+  32% {
+    transform: translateX(80vw);
+    opacity: 0;
+  }
+  33% {
+    transform: translateX(80vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imageFour {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(-45vw);
+    opacity: 1;
+  }
+  41% {
+    transform: translateX(-45vw);
+    opacity: 0;
+  }
+  42% {
+    transform: translateX(70vw);
+    opacity: 0;
+  }
+  43% {
+    transform: translateX(70vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imageFive {
+  0% {
+    opacity: 1;
+  }
+  53% {
+    transform: translateX(-62vw);
+    opacity: 1;
+  }
+  54% {
+    transform: translateX(-62vw);
+    opacity: 0;
+  }
+  55% {
+    transform: translateX(57vw);
+    opacity: 0;
+  }
+  56% {
+    transform: translateX(57vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imageSix {
+  0% {
+    opacity: 1;
+  }
+  72% {
+    transform: translateX(-85vw);
+    opacity: 1;
+  }
+  73% {
+    transform: translateX(-85vw);
+    opacity: 0;
+  }
+  74% {
+    transform: translateX(45vw);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(45vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imageSeven {
+  0% {
+    opacity: 1;
+  }
+  83% {
+    transform: translateX(-96vw);
+    opacity: 1;
+  }
+  84% {
+    transform: translateX(-96vw);
+    opacity: 0;
+  }
+  85% {
+    transform: translateX(35vw);
+    opacity: 0;
+  }
+  86% {
+    transform: translateX(35vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes imageEight {
+  0% {
+    opacity: 1;
+  }
+  94% {
+    transform: translateX(-106vw);
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(-106vw);
+    opacity: 0;
+  }
+  96% {
+    transform: translateX(25vw);
+    opacity: 0;
+  }
+  97% {
+    transform: translateX(25vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
