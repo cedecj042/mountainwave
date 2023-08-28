@@ -5,11 +5,11 @@ $lightprimary:#176081;
     color: #000;
     @include myfont(Louis,18px);
     padding: 5px;
+    border-bottom: 2px solid rgba(0,31,46,0);
+    border-radius: 0;
     &:hover{
         color: $primary;
-        border-bottom: 2px solid $primary;
-
-        border-radius: 0;
+        border-bottom: 2px solid rgba(0,31,46,1);
     }
 }
 
@@ -116,8 +116,90 @@ header{
 }
 
 .featured{
-    height: 700px;
+    // height: 700px;
     h2{
         @include myfont(LouisB,33px);
+    }
+    .card-body{
+        padding:10px 0;
+        width: 250px !important;
+        h3{
+            @include myfont(Louis,26px);
+        }
+        h6{
+            @include myfont(Louis,18px);
+        }
+        
+    }
+    .btn{
+        @include mybtn();
+    }
+}
+
+.parallax{
+    height: 800px;
+    background-image: url(/images/cover.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 800px;
+    color:white;
+    h2{
+        @include myfont(LouisB,62px);
+        text-transform: capitalize;
+    }
+    p{
+        @include myfont(Louis,36px);
+    }
+}
+
+
+.brands{
+    height: 400px;
+    .ua{
+        transform: translateX(-60px);
+    }
+    .cp{
+        transform: translateX(-300px);
+    }
+    img{
+        margin: 30px;
+        padding: 10px;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+.footer{
+    color:white;
+    height: 400px;
+    background-color: #001F2E;
+    a{
+        text-decoration: none;
+        color: #f6f6f6;
+        h3{
+            @include myfont(LouisB,24px);
+            margin-bottom: 10px
+        }
+        h6{
+            @include myfont(Louis,16px);
+            margin-bottom: 12px;
+        }
+    }
+
+}
+
+.copyright{
+    background-color: $primary;
+    color:white;
+    ul{
+        li{
+            list-style-type: none;
+        }
+    }
+    h4{
+        @include myfont(LouisB,18px);
+        margin: 0;
     }
 }

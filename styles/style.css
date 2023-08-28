@@ -101,17 +101,110 @@ header img {
   font-family: Louis;
   font-size: 18px;
   padding: 5px;
+  border-bottom: 2px solid rgba(0, 31, 46, 0);
+  border-radius: 0;
 }
 .discover button:hover {
   color: #042F44;
-  border-bottom: 2px solid #042F44;
-  border-radius: 0;
+  border-bottom: 2px solid rgb(0, 31, 46);
 }
 
-.featured {
-  height: 700px;
-}
 .featured h2 {
   font-family: LouisB;
   font-size: 33px;
+}
+.featured .card-body {
+  padding: 10px 0;
+  width: 250px !important;
+}
+.featured .card-body h3 {
+  font-family: Louis;
+  font-size: 26px;
+}
+.featured .card-body h6 {
+  font-family: Louis;
+  font-size: 18px;
+}
+.featured .btn {
+  color: #000;
+  font-family: Louis;
+  font-size: 18px;
+  padding: 5px;
+  border-bottom: 2px solid rgba(0, 31, 46, 0);
+  border-radius: 0;
+}
+.featured .btn:hover {
+  color: #042F44;
+  border-bottom: 2px solid rgb(0, 31, 46);
+}
+
+.parallax {
+  height: 800px;
+  background-image: url(/images/cover.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 800px;
+  color: white;
+}
+.parallax h2 {
+  font-family: LouisB;
+  font-size: 62px;
+  text-transform: capitalize;
+}
+.parallax p {
+  font-family: Louis;
+  font-size: 36px;
+}
+
+.brands {
+  height: 400px;
+}
+.brands .ua {
+  transform: translateX(-60px);
+}
+.brands .cp {
+  transform: translateX(-300px);
+}
+.brands img {
+  margin: 30px;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.footer {
+  color: white;
+  height: 400px;
+  background-color: #001F2E;
+}
+.footer a {
+  text-decoration: none;
+  color: #f6f6f6;
+}
+.footer a h3 {
+  font-family: LouisB;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.footer a h6 {
+  font-family: Louis;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.copyright {
+  background-color: #042F44;
+  color: white;
+}
+.copyright ul li {
+  list-style-type: none;
+}
+.copyright h4 {
+  font-family: LouisB;
+  font-size: 18px;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
